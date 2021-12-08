@@ -1,0 +1,15 @@
+{% for post in posts %}
+    <div class="border border-dark p-2 my-3" data-post_id="{{ post.post_id }}">
+        <a class="my-2" href="{% url 'profile' post.post_user_id %}"><b>{{ post.username }}</b></a>
+        <div class="post-content">{{ post.content|linebreaksbr }}</div>
+        <div style="color:grey">{{ post.timestamp }}</div>
+        {% if post.liked %}
+            <div class="like-btn" data-liked="true">❤ {{ post.like}}<br></div>
+        {% else %}
+            <div class="like-btn" data-liked="false">&#9825; {{ post.like }}<br></div>
+        {% endif %}
+        {% if post.post_user_id == user.id %}
+            <button class="btn btn-primary btn-sm mt-2" id="edit-btn">Edit</button>
+        {% endif %}
+    </div>
+{% endfor %}

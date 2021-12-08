@@ -1,0 +1,21 @@
+{% extends "network/layout.html" %}
+
+{% block scripts %}
+    {% load static %}
+    <script src="{% static 'network/main.js' %}"></script>
+    <script src="{% static 'network/edit.js' %}"></script>
+{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <form class="my-3 p-4 border" id="post-form">
+            <h3>New Post</h3>
+            <textarea name="content" id="new_content" class="form-control my-3"></textarea>
+            <input type='submit' class="btn btn-primary" value="Post">
+            {% csrf_token %}
+        </form>
+
+    </div>
+    <div id="post-container" class="container">
+    </div>
+{% endblock %}

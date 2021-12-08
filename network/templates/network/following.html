@@ -1,0 +1,18 @@
+{% extends "network/layout.html" %}
+
+{% block scripts %}
+    {% load static %}
+    <script src="{% static 'network/edit.js' %}"></script>
+    <script>
+        document.querySelectorAll('.like-btn').forEach(like_btn => listen_likes(like_btn));
+    </script>
+{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <div class="d-flex justify-content-center py-5">
+            <h1>Following</h1>
+        </div>
+        {% include "network/post.html" %}
+    </div>
+{% endblock %}

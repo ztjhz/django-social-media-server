@@ -1,0 +1,8 @@
+a {
+    color: black;
+}
+
+.like-btn {
+    cursor: pointer;
+    display: inline;
+}
