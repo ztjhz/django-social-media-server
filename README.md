@@ -27,7 +27,7 @@ Profile
 
 ## Demo Video
 
-https://user-images.githubusercontent.com/59118459/145214867-9e02e032-916c-4036-9a8e-a0e7361b9b1a.mp4
+https://user-images.githubusercontent.com/59118459/145222874-87860c97-220e-4310-ab8e-3d4ea026614f.mp4
 
 <br />
 
